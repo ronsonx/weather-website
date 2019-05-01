@@ -7,7 +7,13 @@ const forecast = ({latitude,longitude,location}, callback)=>{
         }else if(body.error){
             callback(body.error, undefined)
         }else{
-            callback(undefined, {location: location,summary: body.daily.data[0].summary, temperature:body.currently.temperature, precipProbability:body.currently.precipProbability})
+            callback(undefined, {
+                location: location,summary: body.daily.data[0].summary, 
+                temperature:body.currently.temperature, 
+                precipProbability:body.currently.precipProbability,
+                temperatureHigh: body.daily.data[0].temperatureMax,
+                temperatureLow: body.daily.data[0].temperatureMin
+            })
             //console.log(body)
         }
     })

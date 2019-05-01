@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', (e)=>{
         }
         
         messageOne.textContent = data.location
-        messageTwo.textContent = data.summary + ' Temperature is ' + data.temperature + ' degree celcius'
+        messageTwo.textContent = data.summary + ' Normal temperature is ' + data.temperature + ' degree celcius. Highest temperature today is '+data.temperatureHigh+' degree celcius and lowest is '+data.temperatureLow+' degree celcius'
 
         //console.log(data.location, data.summary)
     })
