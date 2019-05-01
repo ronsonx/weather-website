@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', (e)=>{
         }
         
         messageOne.textContent = data.location
-        messageTwo.textContent = data.summary
+        messageTwo.textContent = data.summary + ' Temperature is ' + data.temperature + ' degree celcius'
 
         //console.log(data.location, data.summary)
     })

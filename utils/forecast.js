@@ -8,6 +8,7 @@ const forecast = ({latitude,longitude,location}, callback)=>{
             callback(body.error, undefined)
         }else{
             callback(undefined, {location: location,summary: body.daily.data[0].summary, temperature:body.currently.temperature, precipProbability:body.currently.precipProbability})
+            //console.log(body)
         }
     })
 }
